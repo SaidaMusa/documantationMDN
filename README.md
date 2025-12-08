@@ -19,3 +19,40 @@ give you old gps.if its value is infinity it gives you only older gps locations.
 ### EnableHighAccuracy- it is boolean if it is true it can give you possible locations 
 
 ![alt text]({BDDC30D2-0CE4-45F2-B954-909D431C752C}.png)
+
+
+
+### watchPosition() method
+
+It is available since 2015 July.That is a handler function which finds eachtime user changes location . We can also error handle with it. We can handle it by ID.It has options,error,success just like getCurrentPosition() function.
+
+
+let id;
+let target;
+let options;
+
+function success(pos) {
+  const crd = pos.coords;
+
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
+    console.log("Congratulations, you reached the target");
+    navigator.geolocation.clearWatch(id);
+  }
+}
+
+function error(err) {
+  console.error(`ERROR(${err.code}): ${err.message}`);
+}
+
+target = {
+  latitude: 0,
+  longitude: 0,
+};
+
+options = {
+  enableHighAccuracy: false,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+id = navigator.geolocation.watchPosition(success, error, options);
