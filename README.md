@@ -56,3 +56,24 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
+
+
+
+### Interfaces
+
+### Geolocation
+
+It is main class of this API. 
+
+### GeolocationPosition
+
+Represents location of a user.A succesfull call  of method in Geolocation.inside a success callback, and contains a timestamp plus a GeolocationCoordinates object instance.
+
+
+### GeolocationPositionError
+
+A GeolocationPositionError is returned by an unsuccessful call to one of the methods contained inside Geolocation, inside an error callback, and contains an error code and message.
+
+
+
+
