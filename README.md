@@ -72,6 +72,32 @@ Represents location of a user.A succesfull call  of method in Geolocation.inside
 
 ### GeolocationPositionError
 
+it is also error notifier
+
+
+The Geolocation API allows users to programmatically access location information in secure contexts.
+Access may further be controlled by the Permissions Policy directive geolocation. The default allowlist for geolocation is self, which allows access to location information in same-origin nested frames only. Third party usage is enabled by setting a Permissions-Policy response header to grant permission to a particular third party origin:
+
+### http
+
+
+Permissions-Policy: geolocation=(self b.example.com)
+
+The allow="geolocation" attribute must then be added to the iframe element with sources from that origin:
+
+### html
+
+
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
+
+Geolocation data may reveal information that the device owner does not want to share. Therefore, users must grant explicit permission via a prompt when either Geolocation.getCurrentPosition() or Geolocation.watchPosition() is called (unless the permission state is already granted or denied). The lifetime of a granted permission depends on the user agent, and may be time based, session based, or even permanent. The Permissions API geolocation permission can be used to test whether access to use location information is granted, denied or prompt (requires user acknowledgement of a prompt).
+
+
+
+
+
+
+
 A GeolocationPositionError is returned by an unsuccessful call to one of the methods contained inside Geolocation, inside an error callback, and contains an error code and message.
 
 
