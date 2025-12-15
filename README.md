@@ -93,7 +93,23 @@ The allow="geolocation" attribute must then be added to the iframe element with 
 Geolocation data may reveal information that the device owner does not want to share. Therefore, users must grant explicit permission via a prompt when either Geolocation.getCurrentPosition() or Geolocation.watchPosition() is called (unless the permission state is already granted or denied). The lifetime of a granted permission depends on the user agent, and may be time based, session based, or even permanent. The Permissions API geolocation permission can be used to test whether access to use location information is granted, denied or prompt (requires user acknowledgement of a prompt).
 
 
+### variables 
 
+### let 
+
+The let declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
+
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
 
 
 
