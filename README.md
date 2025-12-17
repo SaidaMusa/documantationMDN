@@ -92,6 +92,7 @@ The allow="geolocation" attribute must then be added to the iframe element with 
 
 Geolocation data may reveal information that the device owner does not want to share. Therefore, users must grant explicit permission via a prompt when either Geolocation.getCurrentPosition() or Geolocation.watchPosition() is called (unless the permission state is already granted or denied). The lifetime of a granted permission depends on the user agent, and may be time based, session based, or even permanent. The Permissions API geolocation permission can be used to test whether access to use location information is granted, denied or prompt (requires user acknowledgement of a prompt).
 
+A GeolocationPositionError is returned by an unsuccessful call to one of the methods contained inside Geolocation, inside an error callback, and contains an error code and message.
 
 ### variables 
 
@@ -112,9 +113,15 @@ console.log(x);
 // Expected output: 1
 
 
+let name1;
+let name1 = value1;
+let name1 = value1, name2 = value2;
+let name1, name2 = value2;
+let name1 = value1, name2, /* …, */ nameN = valueN;
 
 
-A GeolocationPositionError is returned by an unsuccessful call to one of the methods contained inside Geolocation, inside an error callback, and contains an error code and message.
+
+
 
 
 
