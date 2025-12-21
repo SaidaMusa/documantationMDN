@@ -98,7 +98,7 @@ A GeolocationPositionError is returned by an unsuccessful call to one of the met
 
 ### let 
 
-The let declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
+The let declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.Let is confirmed and used since 2016
 
 let x = 1;
 
@@ -121,7 +121,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 
 
 ### var
-The var statement declares function-scoped or globally-scoped variables, optionally initializing each to a value.
+The var statement declares function-scoped or globally-scoped variables, optionally initializing each to a value.Var is used since 2015 for all browsers.
 
 var x = 1;
 
@@ -136,7 +136,33 @@ console.log(x);
 // Expected output: 2
 
 
+function foo() {
+  var x = 1;
+  function bar() {
+    var y = 2;
+    console.log(x); // 1 (function `bar` closes over `x`)
+    console.log(y); // 2 (`y` is in scope)
+  }
+  bar();
+  console.log(x); // 1 (`x` is in scope)
+  console.log(y); // ReferenceError, `y` is scoped to `bar`
+}
 
+foo();
+
+
+
+### for (var a of [1, 2, 3]);
+console.log(a); // 3
+
+
+### delete operator
+
+"use strict";
+var x = 1;
+Object.hasOwn(globalThis, "x"); // true
+delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
+delete x; // SyntaxError in strict mode. Fails silently otherwise.
 
 
 
