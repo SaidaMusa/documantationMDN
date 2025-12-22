@@ -155,6 +155,18 @@ foo();
 ### for (var a of [1, 2, 3]);
 console.log(a); // 3
 
+Above, for cycle is not working so it takes last value of array.
+
+
+### for (let a of [1, 2, 3]);
+console.log(a);
+
+for this value it gives : Reference error
+
+Because var is function scope but let is block scope.
+
+let a lives inside for{} but var lives in whole function.
+
 
 ### delete operator
 
