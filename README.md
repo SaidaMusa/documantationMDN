@@ -177,5 +177,38 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x; // SyntaxError in strict mode. Fails silently otherwise.
 
 
+### Binding - name+value
+
+let a=5 this is binding because we are connecting a to 5. even parametres are also bindings
+
+function sum(x, y) {
+  return x + y;
+}
+
+x,y are bindings
+
+try {
+  throw new Error("xato");
+} catch (e) {
+  console.log(e);
+}
+  here e is binding.
+
+
+ ### this
+
+### new.target   these two are Javascript bindings.
+
+
+### mutable and immuteble bindings
+
+const a is immuteble binding because we cant change it.but  let,var a are mutable
+
+### but
+
+const obj = { name: "Ali" };
+obj.name = "Vali"; // mutable
+
+const is unvariable but we can change the inside value here.It has properties so we can choose and change it.
 
 
