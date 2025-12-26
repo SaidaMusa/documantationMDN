@@ -212,3 +212,10 @@ obj.name = "Vali"; // mutable
 const is unvariable but we can change the inside value here.It has properties so we can choose and change it.
 
 
+### const
+
+The const declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.
+
+
+
+
