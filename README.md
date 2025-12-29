@@ -215,7 +215,17 @@ const is unvariable but we can change the inside value here.It has properties so
 ### const
 
 The const declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.
+const is just like let it is also block-scoped and also it cannot create globalThis.
+
+### globalThis
+
+This feature is published in January 2020.It is a global property where we can call it everywhere(node.js,js and e.t.c)
 
 
 
+console.log(globalThis === window); // true
 
+globalThis.x = 10;
+console.log(x); // 10
+
+console.log(globalThis === global); // true
