@@ -221,6 +221,15 @@ const is just like let it is also block-scoped and also it cannot create globalT
 
 This feature is published in January 2020.It is a global property where we can call it everywhere(node.js,js and e.t.c)
 
+### Numbers
+In JavaScript, numbers are implemented in double-precision 64-bit binary format IEEE 754 (i.e., a number between ±2^−1022 and ±2^+1023, or about ±10^−308 to ±10^+308, with a numeric precision of 53 bits). Integer values up to ±2^53 − 1 can be represented exactly.
+
+In addition to being able to represent floating-point numbers, the number type has three symbolic values: Infinity, -Infinity, and NaN (not-a-number).
+
+See also JavaScript data types and structures for context with other primitive types in JavaScript.
+
+You can use four types of number literals: decimal, binary, octal, and hexadecimal.
+
 
 
 console.log(globalThis === window); // true
