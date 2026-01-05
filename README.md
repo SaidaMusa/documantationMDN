@@ -230,11 +230,12 @@ See also JavaScript data types and structures for context with other primitive t
 
 You can use four types of number literals: decimal, binary, octal, and hexadecimal.
 
+### Decimal numbers
+Decimal literals can start with a zero (0) followed by another decimal digit, but if all digits after the leading 0 are smaller than 8, the number is interpreted as an octal number. This is considered a legacy syntax, and number literals prefixed with 0, whether interpreted as octal or decimal, cause a syntax error in strict mode — so, use the 0o prefix instead.
 
 
-console.log(globalThis === window); // true
+0888 // 888 parsed as decimal
+0777 // parsed as octal, 511 in decimal
 
-globalThis.x = 10;
-console.log(x); // 10
 
-console.log(globalThis === global); // true
+
