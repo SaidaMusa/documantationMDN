@@ -238,4 +238,13 @@ Decimal literals can start with a zero (0) followed by another decimal digit, bu
 0777 // parsed as octal, 511 in decimal
 
 
+### Binary numbers
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (0b or 0B). If the digits after the 0b are not 0 or 1, the following SyntaxError is thrown: "Missing binary digits after 0b".
+
+
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
+
+
 
