@@ -247,9 +247,7 @@ Binary number syntax uses a leading zero followed by a lowercase or uppercase La
 0B00000000011111111111111111111111 // 8388607
 Numbers are most commonly expressed in literal forms like 255 or 3.14159. The lexical grammar contains a more detailed reference.
 
-js
 
-Copy
 255; // two-hundred and fifty-five
 255.0; // same number
 255 === 255.0; // true
@@ -259,5 +257,14 @@ Copy
 A number literal like 37 in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a BigInt type, but it's not designed to replace Number for everyday uses. 37 is still a number, not a BigInt.)
 
 When used as a function, Number(value) converts a string or other value to the Number type
+
+
+### Octal numbers
+The standard syntax for octal numbers is to prefix them with 0o. For example:
+
+
+0O755 // 493
+0o644 // 420
+There's also a legacy syntax for octal numbers — by prefixing the octal number with a zero: 0644 === 420 and "\045" === "%". If the digits after the 0 are outside the range 0 through 7, the number will be interpreted as a decimal number.
 
 
