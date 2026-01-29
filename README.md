@@ -273,5 +273,13 @@ There's also a legacy syntax for octal numbers — by prefixing the octal number
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (0x or 0X). If the digits after 0x are outside the range (0123456789ABCDEF), the following SyntaxError is thrown: "Identifier starts immediately after numeric literal".
 
 
+### Numeric separators
+For all literal syntaxes shown above, an underscore (_) can be inserted between digits to improve readability.
 
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
 
