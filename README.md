@@ -283,3 +283,40 @@ For all literal syntaxes shown above, an underscore (_) can be inserted between 
 0xA0_B0_C0
 1_000_000_000_000_000_000_000n
 
+
+
+
+
+### Math object
+The built-in Math object has properties and methods for mathematical constants and functions. For example, the Math object's PI property has the value of pi (3.141…), which you would use in an application as
+
+
+Math.PI;
+Similarly, standard mathematical functions are methods of Math. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
+
+
+Math.sin(1.56);
+Note that all trigonometric methods of Math take arguments in radians.
+
+The following table summarizes the Math object's methods.
+
+Methods of Math
+Method	Description
+abs()	Absolute value
+sin(), cos(), tan()	Standard trigonometric functions; with the argument in radians.
+asin(), acos(), atan(), atan2()	Inverse trigonometric functions; return values in radians.
+sinh(), cosh(), tanh()	Hyperbolic functions; argument in hyperbolic angle.
+asinh(), acosh(), atanh()	Inverse hyperbolic functions; return values in hyperbolic angle.
+pow(), exp(), expm1(), log(), log10(), log1p(), log2()
+
+Exponential and logarithmic functions.
+floor(), ceil()	Returns the largest/smallest integer less/greater than or equal to an argument.
+min(), max()	Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
+random()	Returns a random number between 0 and 1.
+round(), fround(), trunc(),	Rounding and truncation functions.
+sqrt(), cbrt(), hypot()	Square root, cube root, Square root of the sum of square arguments.
+sign()	The sign of a number, indicating whether the number is positive, negative or zero.
+clz32(),
+imul()	Number of leading zero bits in the 32-bit binary representation.
+The result of the C-like 32-bit multiplication of the two arguments.
+
