@@ -320,3 +320,4 @@ clz32(),
 imul()	Number of leading zero bits in the 32-bit binary representation.
 The result of the C-like 32-bit multiplication of the two arguments.
 
+In computer programming, a string is a sequence of characters—such as letters, numbers, symbols, or spaces—used to represent text. Strings are treated as a data type, usually enclosed in quotation marks (e.g., "Hello"), and are fundamental for storing and manipulating human-readable text, often immutable in languages.
