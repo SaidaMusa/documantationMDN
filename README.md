@@ -379,3 +379,10 @@ js
 Copy
 "cat"[1]; // gives value "a"
 When using bracket notation for character access, attempting to delete or assign a value to these properties will not succeed. The properties involved are neither writable nor configurable. (See Object.defineProperty() for more information.)
+
+### eval
+
+Eval is a function which you may add string values
+
+let a = "2+2" // output: "2+2"
+let a = eval("2+2") // output: 4
