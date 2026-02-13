@@ -386,3 +386,23 @@ Eval is a function which you may add string values
 
 let a = "2+2" // output: "2+2"
 let a = eval("2+2") // output: 4
+
+
+**Windows aktivatsiya** — bu sizning kompyuteringizdagi Windows tizimi rasmiy va litsenziyalangan ekanini tasdiqlash jarayoni.
+
+Masalan, Windows 10 yoki Windows 11 o‘rnatilganda, Microsoft tizimni tekshiradi: sizda haqiqiy (original) mahsulot kaliti bormi yoki yo‘qmi.
+
+---
+
+* Ekran pastida “Activate Windows” degan yozuv chiqadi
+* Ba’zi sozlamalar yopiq bo‘ladi
+* Tizim cheklangan rejimda ishlaydi
+
+---
+
+### 🔹 Aktivatsiya qanday bo‘ladi?
+
+Odatda 25 xonali **product key** (kalit) orqali yoki internet orqali avtomatik tasdiqlanadi.
+
+Agar xohlasangiz, men sizga aktivatsiya bilan litsenziya o‘rtasidagi farqni ham oddiy misol bilan tushuntirib beraman.
+
