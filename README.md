@@ -422,3 +422,9 @@ console.log(`${str} ${str.length}`);
 
 This property returns the number of code units in the string. JavaScript uses UTF-16 encoding, where each Unicode character may be encoded as one or two code units, so it's possible for the value returned by length to not match the actual number of Unicode characters in the string. For common scripts like Latin, Cyrillic, wellknown CJK characters, etc., this should not be an issue, but if you are working with certain scripts, such as emojis, mathematical symbols, or obscure Chinese characters, you may need to account for the difference between code units and characters.
 
+### Qisqacha tushuntirish (Context)
+Dasturchi sifatida buni yaxshiroq tushunish uchun oddiy misol:
+Oddiy matn: "Salom".length — natija 5 chiqadi (hammasi joyida).
+Emoji: "😊".length — natija 2 chiqadi.
+Chunki emojilar "surrogat juftliklar" deb ataladi va xotirada ikkita kod birligini egallaydi. Agar sizga haqiqiy belgilar soni kerak bo'lsa, zamonaviy JavaScriptda [...str].length usulidan foydalanish tavsiya etiladi.
+
