@@ -412,3 +412,13 @@ Odatda 25 xonali **product key** (kalit) orqali yoki internet orqali avtomatik t
 
 Agar xohlasangiz, men sizga aktivatsiya bilan litsenziya o‘rtasidagi farqni ham oddiy misol bilan tushuntirib beraman.
 
+
+### length
+
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
+
+This property returns the number of code units in the string. JavaScript uses UTF-16 encoding, where each Unicode character may be encoded as one or two code units, so it's possible for the value returned by length to not match the actual number of Unicode characters in the string. For common scripts like Latin, Cyrillic, wellknown CJK characters, etc., this should not be an issue, but if you are working with certain scripts, such as emojis, mathematical symbols, or obscure Chinese characters, you may need to account for the difference between code units and characters.
+
