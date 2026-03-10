@@ -435,3 +435,13 @@ In V8 (used by Chrome and Node), the maximum length is 229 - 24 (~1GiB). On 32-b
 In Firefox, the maximum length is 230 - 2 (~2GiB). Before Firefox 65, the maximum length was 228 - 1 (~512MiB).
 In Safari, the maximum length is 231 - 1 (~4GiB).
 If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding always becomes UTF-16. The size of the string may be different from the size of the source file.
+
+
+const str1 = "a".repeat(2 ** 29 - 24); // Success
+const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
+
+const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // This buffer is 512MiB in size
+const str = new TextDecoder().decode(buffer); // This string is 1GiB in size
+
+
+
