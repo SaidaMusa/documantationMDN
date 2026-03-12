@@ -444,4 +444,17 @@ const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // This bu
 const str = new TextDecoder().decode(buffer); // This string is 1GiB in size
 
 
+For an empty string, length is 0.
+
+The static property String.length is unrelated to the length of strings. It's the arity of the String function (loosely, the number of formal parameters it has), which is 1.
+
+Since length counts code units instead of characters, if you want to get the number of characters, you can first split the string with its iterator, which iterates by characters:
+
+
+function getCharacterLength(str) {
+  // The string iterator that is used here iterates over characters,
+  // not mere code units
+  return [...str].length;
+}
+
 
