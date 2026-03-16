@@ -450,11 +450,18 @@ The static property String.length is unrelated to the length of strings. It's th
 
 Since length counts code units instead of characters, if you want to get the number of characters, you can first split the string with its iterator, which iterates by characters:
 
-
+### Basic usage
 function getCharacterLength(str) {
   // The string iterator that is used here iterates over characters,
   // not mere code units
   return [...str].length;
 }
 
+const x = "Mozilla";
+const empty = "";
 
+console.log(`${x} is ${x.length} code units long`);
+// Mozilla is 7 code units long
+
+console.log(`The empty string has a length of ${empty.length}`);
+// The empty string has a length of 0
