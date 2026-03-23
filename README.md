@@ -465,3 +465,16 @@ console.log(`${x} is ${x.length} code units long`);
 
 console.log(`The empty string has a length of ${empty.length}`);
 // The empty string has a length of 0
+
+
+
+
+const emoji = "😄";
+console.log(emoji.length); // 2
+console.log([...emoji].length); // 1
+const adlam = "𞤲𞥋𞤣𞤫";
+console.log(adlam.length); // 8
+console.log([...adlam].length); // 4
+const formula = "∀𝑥∈ℝ,𝑥²≥0";
+console.log(formula.length); // 11
+console.log([...formula].length); // 9
