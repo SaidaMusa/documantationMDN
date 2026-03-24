@@ -478,3 +478,20 @@ console.log([...adlam].length); // 4
 const formula = "∀𝑥∈ℝ,𝑥²≥0";
 console.log(formula.length); // 11
 console.log([...formula].length); // 9
+
+
+
+
+### charAt()
+
+The charAt() method of String values returns a new string consisting of the single UTF-16 code unit at the given index.
+
+charAt() always indexes the string as a sequence of UTF-16 code units, so it may return lone surrogates. To get the full Unicode code point at the given index, use
+
+
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
