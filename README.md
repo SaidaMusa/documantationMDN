@@ -495,3 +495,40 @@ const index = 4;
 
 console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
 // Expected output: "The character at index 4 is q"
+
+
+
+and also 
+
+"cat"[1] // gives you "a"
+
+
+
+### Comparing strings
+
+const a = "a";
+const b = "b";
+if (a < b) {
+  // true
+  console.log(`${a} is less than ${b}`);
+} else if (a > b) {
+  console.log(`${a} is greater than ${b}`);
+} else {
+  console.log(`${a} and ${b} are equal.`);
+}
+
+here b is greater because it compares their Unicode
+
+
+like:
+
+"a" → 97
+"b" → 98
+
+
+
+
+
+
+
+
