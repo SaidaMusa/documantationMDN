@@ -525,7 +525,11 @@ like:
 "a" → 97
 "b" → 98
 
+Note that all comparison operators, including === and ==, compare strings case-sensitively. A common way to compare strings case-insensitively is to convert both to the same case (upper or lower) before comparing them.
 
+function areEqualCaseInsensitive(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
+}
 
 
 
