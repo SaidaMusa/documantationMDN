@@ -543,3 +543,103 @@ JavaScript arrays are resizable and can contain a mix of different data types. (
 JavaScript arrays are not associative arrays and so, array elements cannot be accessed using arbitrary strings as indexes, but must be accessed using nonnegative integers (or their respective string form) as indexes.
 JavaScript arrays are zero-indexed: the first element of an array is at index 0, the second is at index 1, and so on — and the last element is at the value of the array's length property minus 1.
 JavaScript array-copy operations create shallow copies. (All standard built-in copy operations with any JavaScript objects create shallow copies, rather than deep copies).
+
+
+
+
+### VOID TYPE
+
+The void type denotes the absence of having any type at all. Typically, you use the void type as the return type of functions that do not return a value. For example:
+
+function log(message): void {
+    console.log(messsage);
+}
+Code language: JavaScript (javascript)
+It is a good practice to add the void type as the return type of a function or a method that doesn’t return any value. By doing this, you can gain the following benefits:
+
+Improve clarity of the code: you do not have to read the whole function body to see if it returns anything.
+Ensure type-safe: you will never assign the function with the void return type to a variable.
+
+
+### Never type
+
+never type never holds value
+
+
+### IF else
+
+const max = 100;
+let counter = 100;
+
+if (counter < max) {
+    counter++;
+} else {
+    counter = 1;
+}
+
+console.log(counter);
+
+
+
+### Ternary operator ?:
+
+const max = 100;
+let counter = 100;
+
+counter < max ? counter++ : counter = 1;
+
+console.log(counter);
+
+
+### else if
+let discount: number;
+let itemCount = 11;
+
+if (itemCount > 0 && itemCount <= 5) {
+    discount = 5;  // 5% discount
+} else if (itemCount > 5 && itemCount <= 10) {
+    discount = 10; // 10% discount 
+} else {
+    discount = 15; // 15%
+}
+
+console.log(`You got ${discount}% discount. `)
+
+
+### switch case
+
+// change the month and year
+let month = 2,
+    year = 2020;
+
+let day = 0;
+switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        day = 31;
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        day = 30;
+        break;
+    case 2:
+        // leap year
+        if (((year % 4 == 0) &&
+            !(year % 100 == 0))
+            || (year % 400 == 0))
+            day = 29;
+        else
+            day = 28;
+        break;
+    default:
+        throw Error('Invalid month');
+}
+
+console.log(`The month ${month} in ${year} has ${day} days`);
